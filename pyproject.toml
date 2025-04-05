@@ -1,0 +1,41 @@
+[project]
+name = "recomovie"
+version = "0.1.0"
+description = "Movie data engineering and similarity search API"
+authors = []
+readme = "README.md"
+requires-python = ">=3.12"
+repository = "https://github.com/clonecmdr/recomvie"
+keywords = ["FastAPI", "duckdb", "pyspark", "jupyter", "luigi", "imdb", "cosine similarity"]
+# classifiers property is dynamic because we want to create Python classifiers automatically
+# dependencies are dynamic because we want to keep Poetry's rich dependency definition format
+dynamic = ["classifiers", "dependencies"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pyspark = "^3.5.3"
+pytest = "^8.3.4"
+luigi = "^3.6.0"
+ipykernel = "^6.29.5"
+jupyter = "^1.1.1"
+fastapi = {extras = ["standard"], version = "^0.115.6"}
+slowapi = "^0.1.9"
+sqlalchemy = {version = "^2.0.36", allow-prereleases = true}
+duckdb = {version = "^1.1.4.dev3741", allow-prereleases = true}
+duckdb-engine = {version = "^0.14.0", allow-prereleases = true}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = [
+    '--strict-config',
+    '-ra',
+]
+pythonpath = [
+    'api/',
+    'workflow/',
+]
+testpaths = ['tests/']
