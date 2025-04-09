@@ -15,11 +15,13 @@ This repo consists of the following:
 
 ### Getting started: _Poetry_
 
-Please install [_Poetry_](https://github.com/python-poetry/poetry) if you don't have it already, preferably with your system's package manager or [`pipx`](https://github.com/pypa/pipx).
+Install [_Poetry_](https://github.com/python-poetry/poetry) if you don't have it already, preferably with your system's package manager (_brew_ on macOS) or [`pipx`](https://github.com/pypa/pipx).
 
 A python poetry `pyproject.toml` is provided.
 
 ```bash
+$ poetry check -v
+
 # install the necessary pre-requisites
 $ poetry config --list
 
