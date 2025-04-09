@@ -27,6 +27,3 @@ tests: unit-test integration-test
 
 requirements.txt:
 	poetry export -f requirements.txt --output requirements.txt --dev
-
-readme.html:
-	pandoc --standalone --embed-resource -c github-markdown.css -f markdown -t html README.md -o README.html

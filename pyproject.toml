@@ -1,12 +1,12 @@
 [project]
 name = "recomovie"
 version = "0.1.0"
-description = "Movie data engineering and similarity search API"
-authors = []
+description = "Movie recommender and similarity search API"
+authors = [{name = "Alex G", email = "alexgh@disroot.org"}, ]
 readme = "README.md"
 requires-python = ">=3.12"
 repository = "https://github.com/clonecmdr/recomvie"
-keywords = ["FastAPI", "duckdb", "pyspark", "jupyter", "luigi", "imdb", "cosine similarity"]
+keywords = ["fastapi", "duckdb", "pyspark", "jupyter", "luigi-pipeline", "imdb-dataset", "cosine-similarity"]
 # classifiers property is dynamic because we want to create Python classifiers automatically
 # dependencies are dynamic because we want to keep Poetry's rich dependency definition format
 dynamic = ["classifiers", "dependencies"]
